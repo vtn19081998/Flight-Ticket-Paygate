@@ -134,15 +134,16 @@
             color: #444;
         }
         .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-            background-color: #f9f9f9;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
+		.form-group select {
+			width: 100%;
+			padding: 12px; /* Đảm bảo padding đồng bộ */
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			font-size: 14px;
+			background-color: #f9f9f9;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+			box-sizing: border-box; /* Đảm bảo kích thước bao gồm padding và border */
+		}
         #account-name,
         #content {
             text-transform: uppercase;
@@ -153,13 +154,14 @@
             box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
             outline: none;
         }
-        .form-group select {
-            appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23666%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M7.247%2011.14L2.451%205.658C1.885%205.013%202.345%204%203.204%204h9.592a1%201%200%200%201%20.753%201.659l-4.796%205.48a1%201%200%200%201-1.506%200z%22/%3E%3C/svg%3E');
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            padding-right: 30px;
-        }
+		.form-group select {
+			appearance: none;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23666%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M7.247%2011.14L2.451%205.658C1.885%205.013%202.345%204%203.204%204h9.592a1%201%200%200%201%20.753%201.659l-4.796%205.48a1%201%200%200%201-1.506%200z%22/%3E%3C/svg%3E');
+			background-repeat: no-repeat;
+			background-position: right 12px center;
+			padding-right: 30px; /* Đảm bảo không gian cho mũi tên dropdown */
+			height: 44px; /* Đặt chiều cao cố định để đồng bộ với input */
+		}
         .bank-transfer a {
             color: #1a73e8;
             text-decoration: none;
