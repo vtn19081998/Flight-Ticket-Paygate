@@ -1,0 +1,254 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+h2 {
+    color: #1a73e8;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 150px;
+    height: auto;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+#screenshot-area {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.payment-option {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #f1f3f5;
+    border-color: #1a73e8;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #1a73e8;
+}
+
+.fee {
+    color: #888;
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+.bank-transfer {
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+
+.bank-transfer p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.bank-transfer .copy {
+    color: #1a73e8;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.bank-transfer .copy:hover {
+    color: #1557b0;
+    text-decoration: underline;
+}
+
+.bank-transfer .copy:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+.bank-transfer .transfer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.bank-transfer .transfer-info {
+    flex: 1;
+}
+
+.bank-transfer .transfer-qr {
+    flex: 0 0 auto;
+}
+
+.bank-transfer .transfer-qr img {
+    width: 160px;
+    height: 160px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+#account-name{
+    text-transform: uppercase;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23666%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M7.247%2011.14L2.451%205.658C1.885%205.013%202.345%204%203.204%204h9.592a1%201%200%200%201%20.753%201.659l-4.796%205.48a1%201%200%200%201-1.506%200z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 30px;
+    height: 44px;
+}
+
+.bank-transfer a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bank-transfer a:hover {
+    text-decoration: underline;
+}
+
+.bank-transfer label {
+    font-weight: 600;
+    color: #333;
+}
+
+.screenshot-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.screenshot-btn:hover {
+    background-color: #1557b0;
+}
+
+.screenshot-btn:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 50px;
+    background-color: #888;
+    margin: 0 20px 30px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 0 30px 0;
+}
