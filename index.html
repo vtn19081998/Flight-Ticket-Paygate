@@ -243,7 +243,7 @@
 			const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 			let result = '';
 			
-			for (let i = 0; i < 10; i++) {
+			for (let i = 0; i < 6; i++) {
 				const randomIndex = Math.floor(Math.random() * chars.length);
 				result += chars[randomIndex];
 			}
@@ -254,9 +254,9 @@
 				result = result.slice(0, randomPos) + char + result.slice(randomPos);
 			}
 			
-			result = result.slice(0, 12);
+			result = result.slice(0, 8);
 			
-			while (result.length < 12) {
+			while (result.length < 8) {
 				const randomIndex = Math.floor(Math.random() * chars.length);
 				result += chars[randomIndex];
 			}
