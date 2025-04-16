@@ -39,8 +39,7 @@ Dự án này là một giao diện cổng thanh toán trực tuyến được t
      ├── logovnpayqr.png      # Logo VNPAYQR
      ├── logovietqr.png       # Logo VietQR
      ├── html2canvas.min.js   # Thư viện html2canvas
-   /images
-     ├── screenshot.png       # Ảnh giao diện
+     ├── screenshot.jpg       # Ảnh giao diện
    index.html                 # Tệp HTML chính
    README.md                  # Tệp hướng dẫn này
    ```
