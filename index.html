@@ -92,7 +92,7 @@
 
         <div class="form-group">
             <label for="content">Nội dung:</label>
-            <input type="text" id="content" placeholder="Nhập nội dung" aria-required="true">
+            <input type="text" id="content" value="FMLB0" placeholder="Nhập nội dung" aria-required="true">
         </div>
 
         <div class="form-group">
@@ -238,32 +238,6 @@
 			}
 		}
 
-		// Hàm sinh chuỗi ngẫu nhiên 12 ký tự, đảm bảo có 0 và O
-		function generateRandomContent() {
-			const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-			let result = '';
-			
-			for (let i = 0; i < 6; i++) {
-				const randomIndex = Math.floor(Math.random() * chars.length);
-				result += chars[randomIndex];
-			}
-			
-			const mustHave = ['0', 'O'];
-			for (let char of mustHave) {
-				const randomPos = Math.floor(Math.random() * result.length);
-				result = result.slice(0, randomPos) + char + result.slice(randomPos);
-			}
-			
-			result = result.slice(0, 8);
-			
-			while (result.length < 8) {
-				const randomIndex = Math.floor(Math.random() * chars.length);
-				result += chars[randomIndex];
-			}
-			
-			return result;
-		}
-
 		// Lấy các phần tử input và display
 		const accountNameInput = document.getElementById('account-name');
 		const amountInput = document.getElementById('amount');
@@ -281,7 +255,6 @@
 		function saveToLocalStorage() {
 			localStorage.setItem('accountName', accountNameInput.value);
 			localStorage.setItem('amount', amountInput.value);
-			localStorage.setItem('content', contentInput.value);
 			localStorage.setItem('bank', bankInput.value);
 			localStorage.setItem('accountNumber', accountNumberInput.value);
 		}
@@ -290,13 +263,13 @@
 		function restoreFromLocalStorage() {
 			accountNameInput.value = localStorage.getItem('accountName') || '';
 			amountInput.value = localStorage.getItem('amount') || '';
-			contentInput.value = localStorage.getItem('content') || '';
+			contentInput.value = 'FMLB0';
 			bankInput.value = localStorage.getItem('bank') || '';
 			accountNumberInput.value = localStorage.getItem('accountNumber') || '';
 
 			displayAccountName.textContent = accountNameInput.value || '';
 			displayAmount.textContent = amountInput.value || '';
-			displayContent.textContent = contentInput.value || '';
+			displayContent.textContent = contentInput.value;
 			displayBank.textContent = bankInput.value || '';
 			displayAccountNumber.textContent = accountNumberInput.value || '';
 
@@ -349,17 +322,11 @@
 			}
 			amountInput.value = value;
 			displayAmount.textContent = value || '';
-			
-			const randomContent = generateRandomContent();
-			contentInput.value = randomContent;
-			displayContent.textContent = randomContent || '';
-			
 			saveToLocalStorage();
 		});
 
 		contentInput.addEventListener('input', () => {
 			normalizeInput(contentInput, displayContent, false);
-			saveToLocalStorage();
 		});
 
 		// Khởi tạo: khôi phục dữ liệu từ localStorage
