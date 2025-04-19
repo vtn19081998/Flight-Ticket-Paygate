@@ -444,7 +444,7 @@
 			}
 
 			// Định dạng nội dung để sao chép
-			const textToCopy = `Tên tài khoản: ${accountName}\nSố tiền: ${amount}\nNội dung: ${content}\nNgân hàng: ${bank}\nSố tài khoản: ${accountNumber}`;
+			const textToCopy = `Tên tài khoản: ${accountName}\nSố tiền: ${amount}\nNội dung: ${content} (Copy)\nNgân hàng: ${bank}\nSố tài khoản: ${accountNumber}`;
 
 			// Sao chép vào clipboard
 			navigator.clipboard.writeText(textToCopy).then(() => {
